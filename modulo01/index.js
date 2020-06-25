@@ -1,10 +1,17 @@
 const express = require('express');
 
 const server = express();
-
+//Query params = ?test=1
+//Route params = /users/1
+//Request body = {"name": "Diego", "email": "user@gmail.com"}
 //localhost:3000/test
-server.get('/test', (req, res) => {
-  return res.json({message: 'Hello World!'});
+
+const users = ['Dalto', 'Tonho', 'Lubiana'];
+
+server.get('/users/:index', (req, res) => {
+  const {index} = req.params;
+
+  return res.json(users[index]);
 })
 
 server.listen(3000);
