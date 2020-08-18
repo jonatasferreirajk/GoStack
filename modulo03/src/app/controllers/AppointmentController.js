@@ -42,9 +42,6 @@ class AppointController {
 
     const { provider_id, date } = req.body;
 
-    /**
-     * Check if provider_id is a provider
-     */
     const isProvider = await User.findOne({
       where: { id: provider_id, provider: true },
     });
