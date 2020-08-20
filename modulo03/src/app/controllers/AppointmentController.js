@@ -87,7 +87,6 @@ class AppointController {
       { locale: pt }
     );
     await Notification.create({
-      // Luis' new appointment for June 22 at 8:00 am
       content: `${user.name} new Appointment for ${formattedDate}`,
       user: provider_id,
     });
