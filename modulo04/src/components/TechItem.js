@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function TechItem({tech, onDelete}) {
   return (
-    <li key={tech}>
+    <li>
       {tech}
       <button onClick={onDelete} type="button">
         Remover
